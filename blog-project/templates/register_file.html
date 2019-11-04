@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注&nbsp;册</title>
+		<style>
+			body{
+				color: red;
+                {#background:url(/static/NFLDfog_ZH-CN4846953507_1920x1080.jpg) no-repeat;#}
+			}
+			
+		.header{
+            background:url(../static/NFLDfog_ZH-CN4846953507_1920x1080.jpg) no-repeat;
+			background-size:cover;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			margin-top: 0px;
+			text-overflow: ellipsis;
+			}
+		.main{
+			text-align: center;
+			background: transparent;
+			/*透明色*/
+			position: absolute;
+			top: 250px;
+			left:650px ;
+			}
+		form input{
+				border: 1px solid white;
+				display: block;
+				margin: 0px auto 10px auto;
+				padding: 10px;
+				width: 220px;
+				border-radius: 30px;
+				font-size: 16px;
+				font-weight: 300;
+				text-align: center
+			}
+			
+			.button1 {
+				background-color: #00a7de;
+				border-radius: 5px;
+				border: 1px solid #0381aa;
+				;
+				height: 30px;
+				width: 50px;
+				margin: 30px;
+			}
+			form input:hover {
+				background-color: pink;
+			
+			}
+			input{
+				outline: none;
+			}
+			a{
+				text-decoration: none;
+				font-size: 50px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="main">
+				<h1><a href="//www.baidu.com">REGISTER!</a></h1>
+				<form action="user_register" method="post">
+					<input type="text" name="Newusername" placeholder="支持QQ号/手机号" autofocus required="required" min="10" max="12">
+					<input type="password" name="Newupwd"  placeholder="请输入密码" required="required" min="8" max="15">
+					<input type="password" name="Newupwd2" placeholder="请再次输入密码" required="required" min="8" max="15">
+					<button type="submit" class="button1">提&nbsp;&nbsp;交</button>
+					<button type="submit" class="button1">重&nbsp;&nbsp;置</button>
+				</form>
+                {% for msg in get_flashed_messages() %}
+                    {{msg}}
+                    {% endfor %}
+			</div>
+		</div>
+	</body>
+</html>

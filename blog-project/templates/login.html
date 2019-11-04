@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome!!</title>
+		<style type="text/css">
+			body{
+				color: skyblue;
+				/*body  字体颜色*/
+			}
+
+			/*第一个div的样式*/
+			.content {
+                background-image: url(/static/1000306.jpg) ;
+                background-repeat: no-repeat;
+				background-size: cover;
+				position: absolute;
+				/* 绝对定位*/
+				left: 0;
+				width: 100%;
+				height: 100%;
+				margin-top: 0px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+			}
+
+			.main {
+				text-align: center;
+				max-width: 600px;
+				height: 100px;
+				padding: 100px 0px;
+				margin: 0 auto;
+				background: transparent;
+				/*透明色*/
+				position: relative;
+				/*相对定位*/
+				top: 0px;
+				/*与顶部*/
+
+
+			}
+
+			.main h1 {
+				font-family: "楷体";
+				font-size: 70px;
+				font-weight: 2px;
+				position: relative;
+				top: 20px;
+				left: 10px;
+			}
+
+			form {
+				padding: 20px 0;
+			}
+
+			form input {
+				border: 1px solid white;
+				display: block;
+				margin: 0px auto 10px auto;
+				padding: 10px;
+				width: 220px;
+				border-radius: 30px;
+				font-size: 18px;
+				font-weight: 300;
+				text-align: center;
+			}
+
+			form input:hover {
+				background-color: pink;
+
+			}
+
+			.button1 {
+				background-color: #00a7de;
+				border-radius: 5px;
+				border: 1px solid #0381aa;
+				;
+                display: inline;
+				height: 30px;
+				width: 50px;
+				margin: 20px;
+			}
+
+			form button:hover {
+				background-color: deepskyblue;
+			}
+
+			#a-register {
+				font-size: 15px;
+				color: deeppink;
+				margin-right: 10px;
+				float: right;
+				padding: 0;
+				margin: 0;
+			}
+
+			.nav-con {
+				float: left;
+				text-align: center;
+				line-height: 2.625rem;
+				height: 42px;
+				position: relative;
+				background-color: rgb(255, 255, 255, 0);
+				left: 10px;
+			}
+
+			a {
+				text-decoration: none;
+				/* 去下划线*/
+			}
+
+			li {
+				display: inline;
+				/* float: left; */
+			}
+
+			li a {
+				color: greenyellow;
+				height: 100%;
+				padding: 0 7px;
+
+			}
+
+			input {
+				outline: none;
+			}
+
+			.lable1 {
+				position: relative;
+				bottom: 96px;
+				left: 100px;
+			}
+
+			.span-style {
+				color: #bbb;
+				font-size: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="main">
+				<h1><a href="//www.baidu.com">Welcome!</a></h1>
+				<form action="/" novalidate="" method="post">
+					<input type="text" name="username" placeholder="QQ号/邮箱/手机号" autofocus max="12" min="10">
+					<input type="password" name="pwd"  placeholder="请输入密码" max="15" min="8">
+					<button type="submit" class="button1">登&nbsp;&nbsp;陆</button>
+				</form>
+
+				<label class="lable1">
+{#					<input type="checkbox" name="rempwd" value="True">记住密码#}
+{#					<span class="span-style">不是自己的电脑不要勾选此项</span>#}
+				</label>
+				<a href="/register" id="a-register" target="_blank">没有账号?先注册一个吧!!</a>
+
+
+			</div>
+		</div>
+		<div class="nav-con">
+			<ul>
+				<li><a href="/success" title="首页">首页</a></li>
+				<li><a href="//www.bilibili.com" title="视频" target="_blank">视频</a></li>
+            </ul>
+		</div>
+	</body>
+</html>
