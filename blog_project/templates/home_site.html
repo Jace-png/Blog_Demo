@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        div {
+            display: block;
+
+        }
+
+        .nav_blog {
+            margin-bottom: 0px;
+            height: 42px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            padding: 0px auto;
+
+
+        }
+
+        .nav {
+            border-left-width: 0px;
+            margin: 0 10px 0 0;
+            font-size: 14px;
+            left: 0;
+            z-index: 9;
+            list-style: none;
+            float: left;
+            display: block;
+            padding: 10px 0 10px 0;
+            width: 100%;
+            background-color: #040404;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav > li {
+            width: 15%;
+            margin-right: 0;
+            font-size: 12px;
+            position: relative;
+            float: left;
+            text-align: center;
+            line-height: 20px;
+            display: list-item;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav_blog">
+    <ul class="nav">
+        <li class=""><a href="#">首页</a></li>
+        <li class=""><a href="about" target="_blank">关于</a></li>
+        <li class=""><a href="/" target="_blank">学习</a></li>
+        <li class=""><a href="/" target="_blank">留言</a></li>
+        <li class=""><a href="/" target="_blank">求助</a></li>
+        <li class=""><a href="/" target="_blank">资源</a></li>
+    </ul>
+</div>
+<div>
+    <p>{{ user_logining }}</p>
+    <form action="success" method="post" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+        {{ form.Autoname.label }}{{ form.Autoname(size='10') }}
+        <br>
+        {{ form.fname.label }} {{ form.fname(size='1') }}
+        <br>
+        {{ form.sub_time.label }} {{ form.sub_time(size='10') }}
+        {{ form.submit.label }} {{ form.submit(size='1') }}
+
+        {#			        {{ form.del_but.label }} {{ form.del_but(size='1') }}#}
+        {#                    <br>#}
+
+
+    </form>
+</div>
+</body>
+</html>
