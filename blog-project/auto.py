@@ -1,5 +1,6 @@
 from flask import render_template, Blueprint
 from flask import Flask,redirect
+import dbs
 # 创建蓝图对象
 bp = Blueprint('blog', __name__)
 
@@ -16,7 +17,8 @@ def blog_register():
 
 @bp.route('/success')
 def login_success():
-    return render_template('home_site.html')
+    form = dbs.MyFrom()
+    return render_template('add_page.html',form = form)
 
 @bp.route('/about')
 def about():

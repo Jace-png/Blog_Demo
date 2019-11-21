@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>add_blog</title>
     <style type="text/css">
         div {
             display: block;
@@ -55,6 +55,7 @@
     </style>
 </head>
 <body>
+<hr>
 <div class="nav_blog">
     <ul class="nav">
         <li class=""><a href="#">首页</a></li>
@@ -65,22 +66,31 @@
         <li class=""><a href="/" target="_blank">资源</a></li>
     </ul>
 </div>
+
+{#<h1>{{ user_logining+'的博客' }}</h1>#}
 <div>
-    <p>{{ user_logining }}</p>
     <form action="success" method="post" enctype="multipart/form-data">
-        {{ form.csrf_token }}
-        {{ form.Autoname.label }}{{ form.Autoname(size='10') }}
+        {{ form.csrf_token }}   {#跨站请求伪造#}
+        {{ form.title.label }}  {#标题#}
         <br>
-        {{ form.fname.label }} {{ form.fname(size='1') }}
+        {{ form.title(size = '20') }}
         <br>
-        {{ form.sub_time.label }} {{ form.sub_time(size='10') }}
-        {{ form.submit.label }} {{ form.submit(size='1') }}
-
-        {#			        {{ form.del_but.label }} {{ form.del_but(size='1') }}#}
-        {#                    <br>#}
-
-
+        {{ form.fname.label }}   {#文件名#}
+        <br>
+        {{ form.fname(size='1')}}
+        <br>
+        {{ form.AllFile.label }}   {#博客内容#}
+        <br>
+        {{ form.AllFile(size = '20',style="width: 727px; height: 432px;") }}
+        <br>
+        {{ form.submit.label }}  {#提交按钮#}
+        <br>
+        {{ form.submit(size='1') }}
+        <hr>
     </form>
+    <span></span>
 </div>
+
+
 </body>
 </html>

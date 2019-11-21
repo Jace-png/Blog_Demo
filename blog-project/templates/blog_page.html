@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Content</title>
+</head>
+<body>
+
+<h1>{{ user_logining }}</h1>
+<a href="success">写博客</a>
+<br>
+{% for blog in blogs %}
+    <p><a href={{ url_for('showblog',blog_id=blog.id) }}>{{ blog.Title }}</a></p>
+{% endfor %}
+<span>{{ res }}</span>
+
+</body>
+</html>
